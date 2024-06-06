@@ -1,3 +1,13 @@
+if(localStorage.getItem("headlinesai-extention")!==null){
+    document.getElementById("extention").style.display = "none"
+}
+document.addEventListener('DOMContentLoaded', function() {
+    var loader = document.getElementById('loader');
+    var content = document.getElementById('content');
+    loader.style.display = 'none';
+    content.style.display = 'block';
+});
+
 if (!localStorage.getItem('headlinesai')) {
     localStorage.setItem('headlinesai', JSON.stringify([]))
 }

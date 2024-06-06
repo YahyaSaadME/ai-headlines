@@ -1,5 +1,6 @@
 document.getElementById("spinner").style.display = "none";
 document.getElementById("alert").style.display = "none";
+
 if (!localStorage.getItem('headlinesai')) {
     localStorage.setItem('headlinesai', JSON.stringify([]))
 }
