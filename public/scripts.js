@@ -50,8 +50,8 @@ function disableAlert() {
 }
 function alert(msg) {
     document.getElementById("alert").style.display = null;
-    document.getElementById("alert").innerHTML = `<div class="bg-red-400 px-3 py-2 pb-3 rounded-md text-red-900">
-    <div class="flex justify-between items-center">
+    document.getElementById("alert").innerHTML = `<div class="flex justify-between items-center">
+    <div class="flex justify-between items-center bg-gray-100 px-3 py-2 pb-3 rounded-md text-red-900">
         <span style="margin-right: 10px;">
             ${msg}
         </span>
@@ -169,7 +169,7 @@ function generate() {
                                     document.getElementById("output").innerHTML += `
                             
                             <li onclick='copy("${i}")'
-                            class="text-white px-4 mt-4 flex justify-between items-center hover:text-gray-900 cursor-pointer hover:bg-white py-2 rounded-md border-2 border-gray-200 border-dashed">
+                            class="text-white px-4 mt-4 flex justify-between items-center hover:text-gray-900 cursor-pointer hover:bg-white py-2 rounded-md">
                             <span id="result-${i}">${res[i + 1]}</span>
                             <svg id="copy-bef-${i}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-clipboard2" viewBox="0 0 16 16">
@@ -211,4 +211,3 @@ function generate() {
 
     } else { alert("Please type the relavent content to generate.") }
 }
-

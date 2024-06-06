@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History</title>
+    <title>History - Headlines Ai</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="icon" href="./assets/fav/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./assets/fav/favicon.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="./assets/fav/apple-touch-icon.png">
-
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        *{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
 </head>
 
 <body style="background-color: black;">
     <button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar"
         aria-controls="cta-button-sidebar" type="button"
-        class="bg-black inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        class="bg-black inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden">
         <span class="sr-only">Open sidebar</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +33,8 @@
     <aside id="cta-button-sidebar"
         class=" fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-black"
         aria-label="Sidebar">
-        <div class="h-full px-5 py-4 overflow-y-auto bg-gray-900 sm:border-none border-r " style="background-color: black;">
+        <div class="h-full px-5 py-4 overflow-y-auto bg-gray-900 sm:border-none border-r "
+            style="background-color: black;">
             <h3 class="text-2xl font-bold text-white px-3">Headlines AI</h3>
             <div class="flex flex-col justify-between" style="height: 90vh;">
                 <ul class="space-y-2 font-medium pt-5">
@@ -91,14 +97,12 @@
                         d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
                 </svg>
             </div>
-            <div id="alert" class="w-full justify-center flex mt-2">
-                
-            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 h-full" style="height: 95vh;">
                 <div class="border-r sm:border-none  px-6 h-full">
                     <div class="flex justify-between items-center">
                         <h4 class="text-white font-bold text-xl mt-5">
-                            Input
+                            Your Inputs
                         </h4>
                         <svg onclick="reset()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
                             class="bi bi-arrow-clockwise w-6 h-6 mt-4 cursor-pointer" viewBox="0 0 16 16">
@@ -108,10 +112,12 @@
                                 d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
                         </svg>
                     </div>
-                    <ul id="inputs"> 
-                        
-                    </ul>
-                  
+                    <div class="flex justify-between">
+                        <ul id="inputs" class="w-full">
+                        </ul>
+
+                    </div>
+
                 </div>
                 <div class="px-6 h-full">
                     <div class="flex justify-between items-center">
@@ -124,23 +130,16 @@
                                 d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
                         </svg>
                     </div>
-                    
+
                     <ul class="mt-5" id="output">
-                        <div class="flex justify-center items-center" id="spinner">
-                            <div role="status">
-                                <svg aria-hidden="true"
-                                    class="inline w-6 h-6 text-gray-200 animate-spin  fill-gray-600 "
-                                    viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                                        fill="currentColor" />
-                                    <path
-                                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                                        fill="currentFill" />
-                                </svg>
-                                <span class="sr-only">Loading...</span>
+                        <li data-tooltip-target="tooltip-spinner"
+                            class="text-white px-4 my-4 hover:text-gray-900 cursor-pointer hover:bg-white py-2 rounded-md border-2 border-gray-200 border-dashed">
+                            <span>Nothing to show.</span>
+                            <div id="tooltip-spinner" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 pb-3 text-sm font-medium text-black transition-opacity duration-300 bg-white rounded-lg shadow-sm opacity-0 tooltip">
+                                select any one from inputs.
                             </div>
-                        </div>                        
+                        </li>
 
                     </ul>
 
