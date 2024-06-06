@@ -9,12 +9,17 @@
     <link rel="icon" href="./assets/fav/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./assets/fav/favicon.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="./assets/fav/apple-touch-icon.png">
+    <style>
+        *::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 
-<body style="background-color: black;overflow: hidden;">
+<body style="background-color: black;">
     <button data-drawer-target="cta-button-sidebar" data-drawer-toggle="cta-button-sidebar"
         aria-controls="cta-button-sidebar" type="button"
-        class="bg-black inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        class="bg-black inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden">
         <span class="sr-only">Open sidebar</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +32,8 @@
     <aside id="cta-button-sidebar"
         class=" fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-black"
         aria-label="Sidebar">
-        <div class="h-full px-5 py-4 overflow-y-auto bg-gray-900 sm:border-none border-r " style="background-color: black;">
+        <div class="h-full px-5 py-4 overflow-y-auto bg-gray-900 sm:border-none border-r "
+            style="background-color: black;">
             <h3 class="text-2xl font-bold text-white px-3">Headlines AI</h3>
             <div class="flex flex-col justify-between" style="height: 90vh;">
                 <ul class="space-y-2 font-medium pt-5">
@@ -91,7 +97,7 @@
                 </svg>
             </div>
             <div id="alert" class="w-full justify-center flex mt-2">
-                
+
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 h-full">
                 <div class="border-r sm:border-none  px-6 h-full">
@@ -175,7 +181,8 @@
                                 </h2>
                             </div>
                         </div>
-                        <div id="cta" onclick="toGenerate('cta')" class="rounded-lg my-2 p-1 cursor-pointer" style="display: none;">
+                        <div id="cta" onclick="toGenerate('cta')" class="rounded-lg my-2 p-1 cursor-pointer"
+                            style="display: none;">
                             <div class="border rounded-md bg-white">
                                 <h2 class="text-center font-bold p-2">
                                     CTA
