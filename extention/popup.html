@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ai Headlines</title>
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-uniqueNonceValue';">
+
+<head>
+    <title>Ai Headlines</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-uniqueNonceValue';">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             overflow: hidden;
 
         }
+
         body {
-            width:  320px;
+            width: 320px;
             height: 600px;
             overflow: hidden;
             background-color: black;
         }
-        
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
-    <iframe style="width: 100%;height: 98vh;border: none;overflow: hidden;" src="https://ai-headlines.vercel.app"></iframe>
+    <iframe style="width: 100%;height: 98vh;border: none;overflow: hidden;"
+        src="https://ai-headlines.vercel.app"></iframe>
     </script>
 </body>
 
