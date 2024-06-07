@@ -1,13 +1,11 @@
-// Load environment variables from .env file
 require('dotenv').config();
-
 const express = require('express');
 const app = express();
 app.use(express.json());
 
 const path = require("path")
 const generator = require("./generator.js")
-
+// const  llamagenerator = require("./llamagenerator.js")
 app.use(express.static(path.join(__dirname, '../public')));
 
 
@@ -63,6 +61,10 @@ app.post("/generate", async (req, res) => {
   }
 })
 
+app.post("/llama",(req,res)=>{
+  // llamagenerator()
+  res.json({data:"sent"})
+})
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {

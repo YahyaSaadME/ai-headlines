@@ -107,7 +107,7 @@ function decodeAndFormatText(input) {
             result += `<h2 class="text-2xl font-bold mb-2 text-white group-hover:text-gray-900">${line.slice(3)}</h2>`;
         } else if (line.startsWith('* **')) {
             // Format as a list item
-            result += `<li class="list-disc ml-5 text-white group-hover:text-gray-900"><strong>${line.slice(5, -2)}</strong></li>`;
+            result += `<p class="list-disc ml-5 text-white group-hover:text-gray-900"><strong>${line.slice(5, -2)}</strong></p>`;
         } else if (line.startsWith('**')) {
             // Format as bold text
             result += `<p class="font-bold mb-2 text-white group-hover:text-gray-900">${line.slice(2, -2)}</p>`;
