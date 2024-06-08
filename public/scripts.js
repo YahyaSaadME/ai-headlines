@@ -120,6 +120,7 @@ function decodeAndFormatText(input) {
                         <li onclick='copy("res")'
                             class="group px-4 mt-4 mb-4 flex justify-between text-white hover:text-gray-900 cursor-pointer hover:bg-white py-2 rounded-md border-2 border-gray-200 border-dashed">
                             <div id="result-res">${result}</div>
+                            <div style="width:20px;height:20px;">
                             <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             id="copy-bef-res"    
                             class="bi bi-clipboard2 ml-4 text-" viewBox="0 0 16 16">
@@ -136,6 +137,7 @@ function decodeAndFormatText(input) {
                                     <path
                                         d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5m6.769 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708" />
                                 </svg>
+                                </div>
                         </li>
     
     `
@@ -172,6 +174,7 @@ function generate() {
                             <li onclick='copy("${i}")'
                             class="text-white px-4 mt-4 flex justify-between items-center hover:text-gray-900 cursor-pointer hover:bg-white py-2 rounded-md">
                             <span id="result-${i}">${res[i + 1]}</span>
+                            <div style="width:20px;height:20px;">
                             <svg id="copy-bef-${i}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-clipboard2" viewBox="0 0 16 16">
                                 <path
@@ -186,6 +189,7 @@ function generate() {
                                     <path
                                         d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5m6.769 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708" />
                                 </svg>
+                                </div>
                         </li>
                             
                             
